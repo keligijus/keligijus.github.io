@@ -650,7 +650,8 @@ address {
   font-family: "Exo 2", sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
-  background-color: #fff;
+  background-color: transparent;
+  text-transform: uppercase;
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -739,7 +740,7 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%; }
 
-html, body {
+html, body, section, .row {
   height: 100%; }
 
 section {
@@ -764,16 +765,12 @@ section {
 
 .row {
   margin-left: -15px;
-  margin-right: -15px;
-  height: 100%; }
+  margin-right: -15px; }
   .row:before, .row:after {
     content: " ";
     display: table; }
   .row:after {
     clear: both; }
-
-.intro, .intro .row {
-  height: 100%; }
 
 .intro-text, .intro-photo {
   position: relative;
@@ -799,9 +796,8 @@ section {
   height: 100%; }
 
 .portfolio {
-  padding-top: 12%;
-  padding-bottom: 12%;
-  height: 76%;
+  padding-top: 9em;
+  padding-bottom: 0em;
   text-align: right; }
   .portfolio .description {
     position: relative;
@@ -816,8 +812,7 @@ section {
     position: relative;
     min-height: 1px;
     padding-left: 15px;
-    padding-right: 15px;
-    height: 100%; }
+    padding-right: 15px; }
     @media (min-width: 768px) {
       .portfolio .screenshot {
         margin-left: 8.33333%; } }
@@ -825,6 +820,27 @@ section {
       .portfolio .screenshot {
         float: left;
         width: 66.66667%; } }
+
+.box-header {
+  height: 2em;
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+  background-color: #555;
+  opacity: .8;
+  background-color: rgba(84, 84, 84, 0.8); }
+  .box-header .tiny {
+    height: .6em;
+    width: .6em;
+    border-radius: .6em;
+    background-color: red;
+    position: absolute;
+    top: .7em; }
+  .box-header .circle1 {
+    left: 1.6em; }
+  .box-header .circle2 {
+    left: 2.6em; }
+  .box-header .circle3 {
+    left: 3.6em; }
 
 .box-169, .box-43 {
   position: relative;
@@ -856,6 +872,26 @@ section {
   background-size: cover;
   background-position: center center;
   height: 100%; }
+
+#second-portfolio-item {
+  background-image: url("http://placekitten.com/g/900/900");
+  background-size: cover;
+  background-position: center center;
+  height: 100%; }
+
+#samanu-sofute {
+  background: #e74c3c; }
+  #samanu-sofute .btn:hover, #samanu-sofute .btn:focus, #samanu-sofute .btn.focus {
+    color: #e74c3c; }
+  #samanu-sofute .tiny {
+    background-color: #e74c3c !important; }
+
+#uzuovejos {
+  background: #1abc9c; }
+  #uzuovejos .btn:hover, #uzuovejos .btn:focus, #uzuovejos .btn.focus {
+    color: #1abc9c; }
+  #uzuovejos .tiny {
+    background-color: #1abc9c !important; }
 
 .text-alt, h1, h2, h3, h4, h5, h6 {
   font-family: "Exo 2", sans-serif;
