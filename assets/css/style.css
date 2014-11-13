@@ -740,8 +740,11 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%; }
 
-html, body, section, .row {
-  height: 100%; }
+@media (min-width: 768px) {
+  html, body, section, .row {
+    height: 100%; } }
+body > div {
+  height: 110%; }
 
 section {
   margin-right: auto;
@@ -778,17 +781,19 @@ section {
   padding-left: 15px;
   padding-right: 15px;
   position: relative;
-  height: 100%; }
+  height: 100%;
+  padding-top: 16em;
+  padding-bottom: 16em; }
   @media (min-width: 768px) {
     .intro-text, .intro-photo {
       float: left;
       width: 50%; } }
 
-.mid-box {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%); }
-
+@media (min-width: 768px) {
+  .mid-box {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); } }
 .intro-photo {
   background-image: url("http://placekitten.com/g/900/600");
   background-size: cover;
@@ -797,7 +802,7 @@ section {
 
 .portfolio {
   padding-top: 9em;
-  padding-bottom: 0em;
+  padding-bottom: 9em;
   text-align: right; }
   .portfolio .description {
     position: relative;
@@ -808,6 +813,9 @@ section {
       .portfolio .description {
         float: left;
         width: 25%; } }
+    @media (max-width: 992px) {
+      .portfolio .description {
+        padding-bottom: 3em; } }
   .portfolio .screenshot {
     position: relative;
     min-height: 1px;
@@ -846,7 +854,9 @@ section {
   position: relative;
   width: 100%;
   /* desired width */
-  overflow: hidden; }
+  overflow: hidden;
+  border-bottom-left-radius: .5em;
+  border-bottom-right-radius: .5em; }
 
 .box-169:before {
   content: "";
@@ -892,6 +902,18 @@ section {
     color: #1abc9c; }
   #uzuovejos .tiny {
     background-color: #1abc9c !important; }
+
+footer {
+  padding-top: 4em;
+  padding-bottom: 4em;
+  background-color: #333333;
+  color: #fff; }
+  footer a {
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: bold; }
+    footer a:hover {
+      color: #bfbfbf; }
 
 .text-alt, h1, h2, h3, h4, h5, h6 {
   font-family: "Exo 2", sans-serif;

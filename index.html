@@ -14,6 +14,7 @@
 			<div class="intro-text">
 				<div class="mid-box">
 					<h1>Hi, I'm Eligijus</h1>
+					<br>
 					<p>I code websites</p>
 					<p>I know HTML/CSS</p>
 					<p>I am friendly with coworkers</p>
@@ -56,7 +57,7 @@
 	<section class="portfolio">
 		<div class="row">
 			<div class="description">
-				<h1>Samanų Sofutė</h1>
+				<h1>Užuovėjos</h1>
 				<br>
 				<h4>My role</h4>
 				<p>Coding HTML/CSS/JS and converting to Wordpress theme</p>
@@ -83,9 +84,23 @@
 <footer>
 	<section>
 		<div class="row">
-			
+			<p class="text-center">Eligijus Krėpšta 2014</p>
+			<p class="text-center"><a href="mailto:k.eligijus@gmail.com">k.eligijus@gmail.com</a></p>
 		</div>
 	</section>
 </footer>
+
+<script type="text/javascript">
+	function downloadJSAtOnload() {
+		var element = document.createElement("script");
+		element.src = "assets/js/javascript.js";
+		document.body.appendChild(element);
+	}
+	if (window.addEventListener)
+	window.addEventListener("load", downloadJSAtOnload, false);
+	else if (window.attachEvent)
+	window.attachEvent("onload", downloadJSAtOnload);
+	else window.onload = downloadJSAtOnload;
+</script>
 </body>
 </html>

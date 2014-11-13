@@ -1,5 +1,13 @@
-html, body, section, .row {
+@media (min-width: $screen-sm-min) {
+	html, body, section, .row {
 	height: 100%;
+	}
+}
+.intro {
+
+}
+body > div {
+	height: 110%;
 }
 
 section {
@@ -26,12 +34,17 @@ section {
 	@include make-sm-column(6);
 	position: relative;
 	height: 100%;
+	padding-top: 16em;
+	padding-bottom: 16em;
 }
-.mid-box {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+@media (min-width: $screen-sm-min) {
+	.mid-box {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
 }
+
 
 .intro-photo {
 	background-image: url('http://placekitten.com/g/900/600');
@@ -44,11 +57,14 @@ section {
 
 .portfolio {
 	padding-top: 9em;
-	padding-bottom: 0em;
+	padding-bottom: 9em;
 	text-align: right;
 	.description {
 		@include make-sm-column(3);
-		// height: 100%;
+	@media (max-width: $screen-md-min) {
+		padding-bottom: 3em;
+	}
+
 	}
 	.screenshot {
 		@include make-sm-column-offset(1);
@@ -91,6 +107,8 @@ section {
 	position: relative;
 	width: 100%;		/* desired width */
 	overflow: hidden;
+	border-bottom-left-radius: .5em;
+	border-bottom-right-radius: .5em;	
 }
 .box-169:before{
 	content: "";
@@ -133,7 +151,7 @@ section {
 	height: 100%;	
 }
 
-//Every section id has its own "theme" colour
+//Every portfolio section id has its own "theme" colour
 
 #samanu-sofute {
 	$sam-sof-col: #e74c3c; 	
@@ -164,4 +182,21 @@ section {
 			background-color: $uzuovejos-col!important;
 		}
 } 
-  
+
+//Footer
+
+footer {
+	padding-top: 4em;
+	padding-bottom: 4em;
+	background-color: $text-color;
+	color: #fff;
+
+	a {
+		color: #fff;
+		letter-spacing: 1px;
+		font-weight: bold;
+		&:hover {
+			color: darken(#fff, 25%);
+		}
+	}
+} 
