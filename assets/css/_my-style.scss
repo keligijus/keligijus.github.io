@@ -1,0 +1,33 @@
+html, body {
+	height: 100%;
+}
+
+section {
+  @include container-fixed();
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+.row {
+	@include make-row();
+}
+
+
+//Intro
+
+.intro {
+	height: 100%;
+	background-color: red;
+}
+.intro-text, .intro-photo{
+	@include make-sm-column(6);
+}
+
