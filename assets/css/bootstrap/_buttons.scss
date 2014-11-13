@@ -24,6 +24,7 @@
   white-space: nowrap;
   @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-none);
   @include user-select(none);
+  @include transition(all ease-in-out .15s);
 
   &,
   &:active,
@@ -41,6 +42,7 @@
     text-decoration: none;
     background-color: $gray-dark;
     color: #fff;
+    @include transition(all ease-in-out .15s);
   }
 
   &:active,
