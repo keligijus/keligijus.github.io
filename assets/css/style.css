@@ -799,7 +799,6 @@ section {
     top: 50%;
     transform: translateY(-50%); } }
 .intro-photo {
-  background-image: url("http://placekitten.com/g/900/600");
   background-size: cover;
   background-position: center center;
   height: 100%; }
