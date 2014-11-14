@@ -1,10 +1,8 @@
 @media (min-width: $screen-sm-min) {
-	html, body, section, .row {
+	html, body, .intro, .intro > .row {
 	height: 100%;
+	min-height: 700px;
 	}
-}
-body > div {
-	height: 110%;
 }
 
 section {
@@ -196,5 +194,10 @@ footer {
 		&:hover {
 			color: darken(#fff, 25%);
 		}
+	}
+	.btn:hover,
+	.btn:focus,
+	.btn:active {
+		border: 2px solid #fff;
 	}
 } 
