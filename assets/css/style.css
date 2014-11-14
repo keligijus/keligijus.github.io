@@ -855,7 +855,7 @@ section {
   .box-header .circle3 {
     left: 3.6em; }
 
-.box-169, .box-43 {
+.box-169, .box-43, .box-117 {
   position: relative;
   width: 100%;
   /* desired width */
@@ -875,6 +875,11 @@ section {
   content: "";
   display: block;
   padding-top: 75%; }
+
+.box-117:before {
+  content: "";
+  display: block;
+  padding-top: 63.6363636364%; }
 
 .content {
   position: absolute;
@@ -903,11 +908,11 @@ section {
     background-color: #e74c3c !important; }
 
 #uzuovejos {
-  background: #1abc9c; }
+  background: #B0BABD; }
   #uzuovejos .btn:hover, #uzuovejos .btn:focus, #uzuovejos .btn.focus {
-    color: #1abc9c; }
+    color: #B0BABD; }
   #uzuovejos .tiny {
-    background-color: #1abc9c !important; }
+    background-color: #B0BABD !important; }
 
 footer {
   padding-top: 4em;
