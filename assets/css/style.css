@@ -932,7 +932,10 @@ footer {
   font-weight: 700; }
 
 .hidden {
-  display: none; }
+  display: none;
+  -webkit-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s; }
 
 .visible {
   display: inline-block; }

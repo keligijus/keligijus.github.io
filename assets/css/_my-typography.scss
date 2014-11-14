@@ -5,7 +5,9 @@
 
 .hidden {
 	display: none;
+	@include transition(all ease .5s);
 }
 .visible {
 	display: inline-block;
+	// @include transition(all ease 5s);
 }
