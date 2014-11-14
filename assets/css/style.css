@@ -786,8 +786,8 @@ section {
   padding-right: 15px;
   position: relative;
   height: 100%;
-  padding-top: 16em;
-  padding-bottom: 16em; }
+  padding-top: 9em;
+  padding-bottom: 9em; }
   @media (min-width: 768px) {
     .intro-text, .intro-photo {
       float: left;
@@ -890,29 +890,26 @@ section {
   background-size: cover;
   background-position: 50%; }
 
-#first-portfolio-item {
-  background-size: cover;
-  background-position: center center;
-  height: 100%; }
-
-#second-portfolio-item {
-  background-size: cover;
-  background-position: center center;
-  height: 100%; }
-
 #samanu-sofute {
-  background: #e74c3c; }
+  background: #FCDFE2; }
   #samanu-sofute .btn:hover, #samanu-sofute .btn:focus, #samanu-sofute .btn.focus {
-    color: #e74c3c; }
+    color: #FCDFE2; }
   #samanu-sofute .tiny {
-    background-color: #e74c3c !important; }
+    background-color: #FCDFE2 !important; }
 
 #uzuovejos {
-  background: #B0BABD; }
+  background: #F3F2F5; }
   #uzuovejos .btn:hover, #uzuovejos .btn:focus, #uzuovejos .btn.focus {
-    color: #B0BABD; }
+    color: #F3F2F5; }
   #uzuovejos .tiny {
-    background-color: #B0BABD !important; }
+    background-color: #F3F2F5 !important; }
+
+#afs {
+  background: #A1D3F4; }
+  #afs .btn:hover, #afs .btn:focus, #afs .btn.focus {
+    color: #A1D3F4; }
+  #afs .tiny {
+    background-color: #A1D3F4 !important; }
 
 footer {
   padding-top: 4em;

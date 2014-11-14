@@ -29,8 +29,8 @@ section {
 	@include make-sm-column(6);
 	position: relative;
 	height: 100%;
-	padding-top: 16em;
-	padding-bottom: 16em;
+	padding-top: 9em;
+	padding-bottom: 9em;
 }
 @media (min-width: $screen-sm-min) {
 	.mid-box {
@@ -134,29 +134,12 @@ section {
 	right: 0;
 		background-size: cover;
 		background-position: 50%;
-	// 	background-repeat: no-repeat;
-	// 	transition: all ease-in-out .25s;
-	// &:hover {
-	// 	transform: scale(1.15);
-	// 	transition: all ease-in-out .35s;
-	// }
-}
-
-#first-portfolio-item {
-	background-size: cover;
-	background-position: center center;
-	height: 100%;	
-}
-#second-portfolio-item {
-	background-size: cover;
-	background-position: center center;
-	height: 100%;	
 }
 
 //Every portfolio section id has its own "theme" colour
 
 #samanu-sofute {
-	$sam-sof-col: #e74c3c; 	
+	$sam-sof-col: #FCDFE2; 	
 	background: $sam-sof-col;
 		.btn {
 			&:hover,
@@ -171,7 +154,7 @@ section {
 } 
 
 #uzuovejos {
-	$uzuovejos-col: #B0BABD; 	
+	$uzuovejos-col: #F3F2F5; 	
 	background: $uzuovejos-col;
 		.btn {
 			&:hover,
@@ -182,6 +165,21 @@ section {
 		}
 		.tiny {
 			background-color: $uzuovejos-col!important;
+		}
+}
+
+#afs {
+	$afs-col: #A1D3F4; 	
+	background: $afs-col;
+		.btn {
+			&:hover,
+			&:focus,
+			&.focus{
+				color: $afs-col;
+		  }
+		}
+		.tiny {
+			background-color: $afs-col!important;
 		}
 } 
 
