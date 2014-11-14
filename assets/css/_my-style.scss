@@ -1,10 +1,8 @@
 @media (min-width: $screen-sm-min) {
-	html, body, section, .row {
+	html, body, .intro, .intro > .row {
 	height: 100%;
+	min-height: 700px;
 	}
-}
-body > div {
-	height: 110%;
 }
 
 section {
@@ -100,7 +98,7 @@ section {
 
 
 
-.box-169, .box-43 {
+.box-169, .box-43, .box-117 {
 	position: relative;
 	width: 100%;		/* desired width */
 	overflow: hidden;
@@ -120,6 +118,12 @@ section {
 	content: "";
 	display: block;
 	padding-top: 75%;
+}
+
+.box-117:before{
+	content: "";
+	display: block;
+	padding-top: 63.6363636364%;
 }
 
 .content{
@@ -167,7 +171,7 @@ section {
 } 
 
 #uzuovejos {
-	$uzuovejos-col: #1abc9c; 	
+	$uzuovejos-col: #B0BABD; 	
 	background: $uzuovejos-col;
 		.btn {
 			&:hover,
@@ -196,5 +200,10 @@ footer {
 		&:hover {
 			color: darken(#fff, 25%);
 		}
+	}
+	.btn:hover,
+	.btn:focus,
+	.btn:active {
+		border: 2px solid #fff;
 	}
 } 
