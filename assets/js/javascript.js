@@ -38,4 +38,4 @@ setInterval(function(){
 			$('span#first-skill').css('display','inline-block');
 		}
 	});
-},3333);
+},500);
