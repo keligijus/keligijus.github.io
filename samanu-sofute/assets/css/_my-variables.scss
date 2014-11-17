@@ -1,0 +1,45 @@
+// Custom backgrounds for sections
+
+.bg-gray-darker {
+	background-color: $gray-darker;
+}
+.bg-gray-dark {
+	background-color: $gray-dark;
+}
+.bg-gray {
+	background-color: $gray;
+}
+.bg-gray-light {
+	background-color: $gray-light;
+}
+.bg-gray-lighter {
+	background-color: $gray-lighter;
+}
+.bg-gray-lightest {
+	background-color: lighten($gray-lighter, 5%);
+}
+
+//Mixins
+
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+//Grid Elements
+
+.onethird {
+	@include make-sm-column(4);
+}
+
+//Mixins for vendor prefixes
+// @mixin transition($transition-property, $transition-time, $method) {
+//     -webkit-transition: $transition-property $transition-time $method;
+//     -moz-transition: $transition-property $transition-time $method;
+//     -ms-transition: $transition-property $transition-time $method;
+//     -o-transition: $transition-property $transition-time $method;
+//     transition: $transition-property $transition-time $method;
+// }

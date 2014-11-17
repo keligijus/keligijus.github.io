@@ -1,0 +1,78 @@
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+	font-family: "Oswald", sans-serif; 
+	letter-spacing: 1px;
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 3.8em;
+	letter-spacing: 2px;
+	line-height: 1.2em;
+	margin-bottom: 0.1em;
+}
+
+h2 {
+	font-size: 2.1em;
+	text-align: center;
+	letter-spacing: 0.1em;
+	margin-top: 0;
+	margin-bottom: 50px;//3.571em; /* equals to 50px; */
+	line-height: 1;
+}
+
+h3 {
+	font-size: 1.2em;
+	margin-top: 0;
+	line-height: 1;
+	margin-bottom: 20px;
+}
+
+h6 {
+	font-size: 6px; //0.429em; /* 6px */
+	text-decoration: none;
+	// letter-spacing: -1px;
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 42px; //3.571em; /* equals to 50px; */
+	line-height: 1;
+	font-style: normal;
+}
+
+h1.cursive, h2.cursive, h3.cursive, h4.cursive, h5.cursive, h6.cursive {
+	font-family: $font-family-cursive;
+	font-weight: 400;
+	text-transform: none;
+}
+
+p {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 1.5em;	
+	line-height: 1.5em;
+}
+
+.text-muted {
+	color: lighten($gray-dark, 50%);
+}
+
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+
+.dashes {
+	letter-spacing: -1px;
+	margin-top: 0;
+}
+
+.italic, .lead {
+	font-style: italic;
+}
+
+.lead {
+	margin-bottom: 50px;
+}
