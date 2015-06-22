@@ -1,0 +1,84 @@
+<!doctype html>
+<!-- <html manifest="cache.manifest"> -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Pamidorinis laikrodis</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='http://fonts.googleapis.com/css?family=Asap|Droid+Sans+Mono&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <!-- <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'> -->
+  <!-- <link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'> -->
+</head>
+<!-- <body onload="tomatoe.localStorage.init()"> -->
+<body class="anim-hidden" onload="tomatoe.init()">
+  <main class="progress">
+
+    <section>
+      <div class="timer watch-digits">
+        <span class="minutes" id="minutes">25</span>
+        <span class="divider" id="divider">:</span>
+        <span class="seconds" id="seconds">00</span>
+      </div>
+      <div class="controls">
+        <button id="start" class="current-button" onclick="tomatoe.modes.resetTo.timerRunning()">Start</button>
+        <button id="startShortBreak" onclick="tomatoe.modes.resetTo.timerRunning()" style="display:none">Start Short Break</button>
+        <button id="startLongBreak" onclick="tomatoe.modes.resetTo.timerRunning()" style="display:none">Start Long Break</button>
+        <button id="pause" onclick="tomatoe.modes.resetTo.timerPaused()" style="display:none">Pause</button>
+        <button id="resume" onclick="tomatoe.modes.resetTo.timerResumed()" style="display:none">Resume</button>
+        <button id="restart" onclick="tomatoe.modes.resetTo.timer('resetToZero')" style="display:none">Reset</button>
+      </div>
+      <div id="tomatoes">
+        <span id="first"></span>
+        <span id="second"></span>
+        <span id="third"></span>
+        <span id="last"></span>
+      </div>
+    </section>
+  </main>
+
+    <section class="settings" style="display:none">
+      <button id="setting" class="toggle-settings" onclick="tomatoe.settings.toggleVisibility()">Settings</button>
+      <div class="settings-container hidden">
+
+        <i>Enter new values. Values will be stored automatically.<br>
+        To use them, reset Tomatoe.</i>
+        
+        <form id="updateDefaultModesLength" action="tomatoe.settings.updateDefaultModeLength(timer)">
+
+          <label for="timerLength">Timer length</label>
+          <input type="numbers" name="minutesDefaultVal">
+
+          <label for="shortBreak">Short Break</label>
+          <input type="numbers" name="minutesDefaultShortBreakVal">
+
+          <label for="longBreak">Long Break</label>
+          <input type="numbers" name="minutesDefaultLongBreakVal">
+
+          <button id="reset-to-defaults" onclick="tomatoe.settings.resetToDefaults()">Reset to Defaults</button>
+
+        </form>
+
+        <button id="close-settings" class="close-settings" onclick="tomatoe.settings.hideContainer()">Close</button>
+
+      </div>
+    </section>
+
+<section class="reset" id="reset-container">
+  <button id="reset" class="reset" onclick="tomatoe.events.confirmReset('areYouSure')">Reset</button>
+  <button id="confirm-reset" class="reset" onclick="tomatoe.events.confirmReset('yesIam')" style="display:none">Sure</button>
+</section>
+<span id="easter-egg" class="anim-hidden">?</span>
+
+  <script src="tomatoe.js"></script>
+  <!--
+  <script src="timer.js"></script>
+  <script src="vars.js"></script>
+  <script src="modes.js"></script>
+  <script src="events.js"></script>
+  <script src="helpers.js"></script>
+  <script src="settings.js"></script>
+  <script src="notifications.js"></script>
+  <script src="localstorage.js"></script>
+  -->
+</body>
+</html>
