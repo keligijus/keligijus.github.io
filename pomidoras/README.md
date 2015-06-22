@@ -10,4 +10,4 @@ Just a small personal training project.
 * add version info (about page)
 
 ##bugs
-* mobile zoom and size `fixed
+* mobile zoom and size _fixed_
