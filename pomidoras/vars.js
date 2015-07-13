@@ -33,6 +33,7 @@ tomatoe.vars = {
   settingsContainer: document.getElementsByClassName('settings-container')[0],
   resetButton: document.getElementById('reset'),
   confirmResetButton: document.getElementById('confirm-reset'),
+  notificationPermission: false,
 
   updateDefaultModesLengthForm: document.getElementById('updateDefaultModesLength')
 

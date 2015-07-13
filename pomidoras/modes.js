@@ -10,15 +10,17 @@ tomatoe.modes = {
       tomatoe.vars.currentButton = tomatoe.vars.startButton;
       tomatoe.vars.secondsContainer.innerHTML = tomatoe.vars.secondsVal = tomatoe.vars.secondsDefaultVal;
       tomatoe.vars.minutesContainer.innerHTML = tomatoe.vars.minutesVal = tomatoe.vars.minutesDefaultVal;
-      tomatoe.localStorage.setVal('secondsVal', tomatoe.vars.secondsDefaultVal);
-      tomatoe.localStorage.setVal('minutesVal', tomatoe.vars.minutesDefaultVal);
 
+      if (resetFactor != 'resetFromMemory') {
+        tomatoe.localStorage.setVal('secondsVal', tomatoe.vars.secondsDefaultVal);
+        tomatoe.localStorage.setVal('minutesVal', tomatoe.vars.minutesDefaultVal);
+      }
 
       tomatoe.vars.currentMode = 'timer';
       tomatoe.localStorage.setVal('currentMode','timer');
 
       tomatoe.modes.currentMode();
-      if (resetFactor != 'resetToZero') {
+      if (resetFactor != 'resetToZero' && resetFactor != 'resetFromMemory') {
         tomatoe.notifications.theNotification("Alright, get back to focused work!");
         tomatoe.notifications.playSound();
       }
@@ -54,14 +56,15 @@ tomatoe.modes = {
     timerResumed: function () {
       tomatoe.events.stopSeconds();
       tomatoe.events.updateSeconds();
-      tomatoe.vars.resumeButton.style.display = 'none';
-      tomatoe.vars.currentButton.style.display = 'inline-block';
+      tomatoe.vars.currentButton.style.display = 'none';
+      tomatoe.vars.pauseButton.style.display = 'inline-block';
+      tomatoe.vars.currentButton = tomatoe.vars.pauseButton;
 
       tomatoe.vars.confirmResetButton.style.display = 'none';
       tomatoe.vars.resetButton.style.display = 'inline-block';
     },
 
-    shortBreak: function () {
+    shortBreak: function (resetFactor) {
       tomatoe.events.stopSeconds();
       tomatoe.vars.currentButton.style.display = 'none';
       tomatoe.vars.startShortBreakButton.style.display = 'inline-block';
@@ -69,21 +72,26 @@ tomatoe.modes = {
       tomatoe.vars.currentButton = tomatoe.vars.startShortBreakButton;
       tomatoe.vars.secondsContainer.innerHTML = tomatoe.vars.secondsVal = tomatoe.vars.secondsDefaultShortBreakVal;
       tomatoe.vars.minutesContainer.innerHTML = tomatoe.vars.minutesVal = tomatoe.vars.minutesDefaultShortBreakVal;
-      tomatoe.localStorage.setVal('secondsVal', tomatoe.vars.secondsDefaultShortBreakVal);
-      tomatoe.localStorage.setVal('minutesVal', tomatoe.vars.minutesDefaultShortBreakVal);
+
+      if (resetFactor != 'resetFromMemory') {
+        tomatoe.localStorage.setVal('secondsVal', tomatoe.vars.secondsDefaultShortBreakVal);
+        tomatoe.localStorage.setVal('minutesVal', tomatoe.vars.minutesDefaultShortBreakVal);
+      }
 
       tomatoe.vars.currentMode = 'shortBreak';
       tomatoe.localStorage.setVal('currentMode','shortBreak');
       tomatoe.modes.currentMode();
 
-      tomatoe.notifications.theNotification('Take a short break');
-      tomatoe.notifications.playSound()
+      if (resetFactor != 'resetFromMemory') {
+        tomatoe.notifications.theNotification('Take a short break');
+        tomatoe.notifications.playSound()
+      }
 
       tomatoe.vars.confirmResetButton.style.display = 'none';
       tomatoe.vars.resetButton.style.display = 'inline-block';
     },
 
-    longBreak: function () {
+    longBreak: function (resetFactor) {
       tomatoe.events.stopSeconds();
       tomatoe.vars.currentButton.style.display = 'none';
       tomatoe.vars.startLongBreakButton.style.display = 'inline-block';
@@ -91,30 +99,38 @@ tomatoe.modes = {
       tomatoe.vars.currentButton = tomatoe.vars.startLongBreakButton;
       tomatoe.vars.secondsContainer.innerHTML = tomatoe.vars.secondsVal = tomatoe.vars.secondsDefaultLongBreakVal;
       tomatoe.vars.minutesContainer.innerHTML = tomatoe.vars.minutesVal = tomatoe.vars.minutesDefaultLongBreakVal;
-      tomatoe.localStorage.setVal('secondsVal', tomatoe.vars.secondsDefaultLongBreakVal);
-      tomatoe.localStorage.setVal('minutesVal', tomatoe.vars.minutesDefaultLongBreakVal);
+
+      if (resetFactor != 'resetFromMemory') {
+        tomatoe.localStorage.setVal('secondsVal', tomatoe.vars.secondsDefaultLongBreakVal);
+        tomatoe.localStorage.setVal('minutesVal', tomatoe.vars.minutesDefaultLongBreakVal);
+      }
 
       tomatoe.vars.currentMode = 'longBreak';
       tomatoe.localStorage.setVal('currentMode','longBreak');
       tomatoe.modes.currentMode();
 
-      tomatoe.notifications.theNotification('Take a long break');
-      tomatoe.notifications.playSound()
+      if (resetFactor != 'resetFromMemory') {
+        tomatoe.notifications.theNotification('Take a long break');
+        tomatoe.notifications.playSound()
+      }
 
       tomatoe.vars.confirmResetButton.style.display = 'none';
       tomatoe.vars.resetButton.style.display = 'inline-block';
     },
 
-    completed: function () {
+    completed: function (resetFactor) {
       tomatoe.events.stopSeconds();
       tomatoe.vars.currentButton.style.display = 'none';
       tomatoe.vars.restartButton.style.display = 'inline-block';
       tomatoe.vars.currentButton = tomatoe.vars.restartButton;
       tomatoe.vars.secondsContainer.innerHTML = tomatoe.vars.secondsVal = '00';
       tomatoe.vars.minutesContainer.innerHTML = tomatoe.vars.minutesVal = '00';
-      tomatoe.localStorage.setVal('secondsVal', '00');
-      tomatoe.localStorage.setVal('minutesVal', '00');
 
+      if (resetFactor != 'resetFromMemory') {
+        tomatoe.localStorage.setVal('secondsVal', '00');
+        tomatoe.localStorage.setVal('minutesVal', '00');
+      }
+      
       tomatoe.vars.currentMode = 'completed';
       tomatoe.localStorage.setVal('currentMode','completed');
       tomatoe.modes.currentMode();
@@ -126,9 +142,11 @@ tomatoe.modes = {
         localStorage.totalFullTomatoesCompleted = Number(localStorage.totalFullTomatoesCompleted) + 1;
       }
 
-      tomatoe.notifications.theNotification("You've completed a Tomatoe. Go and start another one!");
-      tomatoe.notifications.playSound()
-
+      if (resetFactor != 'resetFromMemory') {
+        tomatoe.notifications.theNotification("You've completed a Tomatoe. Go and start another one!");
+        tomatoe.notifications.playSound()
+      }
+      
       tomatoe.vars.confirmResetButton.style.display = 'none';
       tomatoe.vars.resetButton.style.display = 'inline-block';
     }

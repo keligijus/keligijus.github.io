@@ -1,5 +1,11 @@
 tomatoe.notifications = {
 
+  getPermission: function() {
+
+    Notification.requestPermission();
+
+  },
+
   theNotification: function(theNotificationTitle) {
 
     //use server https://www.npmjs.com/package/local-web-server
