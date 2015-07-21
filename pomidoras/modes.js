@@ -11,11 +11,6 @@ tomatoe.modes = {
       tomatoe.vars.secondsContainer.innerHTML = tomatoe.vars.secondsVal = tomatoe.vars.secondsDefaultVal;
       tomatoe.vars.minutesContainer.innerHTML = tomatoe.vars.minutesVal = tomatoe.vars.minutesDefaultVal;
 
-<<<<<<< HEAD
-      
-
-=======
->>>>>>> b397f490db0e7e3199ac7117c4c029884f5c83a4
       if (resetFactor != 'resetFromMemory') {
         tomatoe.localStorage.setVal('secondsVal', tomatoe.vars.secondsDefaultVal);
         tomatoe.localStorage.setVal('minutesVal', tomatoe.vars.minutesDefaultVal);
@@ -82,11 +77,6 @@ tomatoe.modes = {
       tomatoe.vars.secondsContainer.innerHTML = tomatoe.vars.secondsVal = tomatoe.vars.secondsDefaultShortBreakVal;
       tomatoe.vars.minutesContainer.innerHTML = tomatoe.vars.minutesVal = tomatoe.vars.minutesDefaultShortBreakVal;
 
-<<<<<<< HEAD
-      
-
-=======
->>>>>>> b397f490db0e7e3199ac7117c4c029884f5c83a4
       if (resetFactor != 'resetFromMemory') {
         tomatoe.localStorage.setVal('secondsVal', tomatoe.vars.secondsDefaultShortBreakVal);
         tomatoe.localStorage.setVal('minutesVal', tomatoe.vars.minutesDefaultShortBreakVal);
@@ -115,11 +105,7 @@ tomatoe.modes = {
       tomatoe.vars.secondsContainer.innerHTML = tomatoe.vars.secondsVal = tomatoe.vars.secondsDefaultLongBreakVal;
       tomatoe.vars.minutesContainer.innerHTML = tomatoe.vars.minutesVal = tomatoe.vars.minutesDefaultLongBreakVal;
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> b397f490db0e7e3199ac7117c4c029884f5c83a4
       if (resetFactor != 'resetFromMemory') {
         tomatoe.localStorage.setVal('secondsVal', tomatoe.vars.secondsDefaultLongBreakVal);
         tomatoe.localStorage.setVal('minutesVal', tomatoe.vars.minutesDefaultLongBreakVal);
