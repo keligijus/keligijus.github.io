@@ -14,11 +14,17 @@ tomatoe.localStorage = {
         };
       console.groupEnd();
 
+<<<<<<< HEAD
       //NOTE: Reset to mode
       if (localStorage.currentMode) {
         var currentMode = localStorage.currentMode;
         tomatoe.modes.resetTo[currentMode]('resetFromMemory');
       }
+=======
+      //NOTE: Reset to mode      
+      var currentMode = localStorage.currentMode;
+      tomatoe.modes.resetTo[currentMode]('resetFromMemory');
+>>>>>>> b397f490db0e7e3199ac7117c4c029884f5c83a4
       
       //NOTE: Update complete Tomotatoes
       for (var j = 0; j < tomatoe.vars.completeTomatoes; j++) {
