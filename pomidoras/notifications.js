@@ -1,5 +1,11 @@
 tomatoe.notifications = {
 
+  getPermission: function() {
+
+    Notification.requestPermission();
+
+  },
+
   theNotification: function(theNotificationTitle) {
 
     //use server https://www.npmjs.com/package/local-web-server
@@ -14,7 +20,7 @@ tomatoe.notifications = {
         body: 'Click to return to the Timer'
       });
       notification.onshow = function() {
-        setTimeout(notification.close.bind(notification), 5000);
+        setTimeout(notification.close.bind(notification), 15000);
       }
       notification.onclick = function() {
         window.focus();
@@ -29,7 +35,7 @@ tomatoe.notifications = {
             body: 'Click to return to the Timer'
           });
           notification.onshow = function() {
-            setTimeout(notification.close.bind(notification), 5000);
+            setTimeout(notification.close.bind(notification), 15000);
           }
           notification.onclick = function() {
             window.focus();
@@ -42,6 +48,20 @@ tomatoe.notifications = {
   playSound: function() {
     var boingSound = new Audio('sounds/bounce.mp3');
     boingSound.play();
+  },
+
+  updatePageTitle: function() {
+    document.title = tomatoe.helpers.keepTwoDigits(tomatoe.vars.minutesVal) +
+    ':' +
+    tomatoe.helpers.keepTwoDigits(tomatoe.vars.secondsVal) + 
+    ' Tomatoe - ' + 
+    tomatoe.vars.currentMode;
+
+    if (tomatoe.helpers.keepTwoDigits(tomatoe.vars.minutesVal) ==='00' && tomatoe.helpers.keepTwoDigits(tomatoe.vars.secondsVal) === '00') {
+      document.title = 'The   timer has stopped';
+    }
+
+
   }
 
 

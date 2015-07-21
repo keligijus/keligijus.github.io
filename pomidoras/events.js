@@ -19,6 +19,7 @@ tomatoe.events = {
         tomatoe.vars.secondsContainer.innerHTML = tomatoe.helpers.keepTwoDigits(tomatoe.vars.secondsVal);
         tomatoe.localStorage.setVal('secondsVal', tomatoe.helpers.keepTwoDigits(tomatoe.vars.secondsVal));
         // tomatoe.vars.secondsVal -= 1;
+        tomatoe.notifications.updatePageTitle();
 
       } else {
 
@@ -26,6 +27,7 @@ tomatoe.events = {
         tomatoe.vars.secondsVal -= 1;
         tomatoe.vars.secondsContainer.innerHTML = tomatoe.helpers.keepTwoDigits(tomatoe.vars.secondsVal);
         tomatoe.localStorage.setVal('secondsVal', tomatoe.helpers.keepTwoDigits(tomatoe.vars.secondsVal));
+        tomatoe.notifications.updatePageTitle();
       }
 
     } , 1000);    
